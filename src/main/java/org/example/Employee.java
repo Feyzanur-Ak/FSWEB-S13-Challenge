@@ -1,4 +1,5 @@
 package org.example;
+import java.util.Arrays;
 
 public class Employee {
 
@@ -46,4 +47,7 @@ public void addHealthPlan(int index, String name)
         return  healthPlans;
     }
 
+    public  String toString(){ //Bu metodu yazmazsam bana referans adresi yazdırır
+        return id + ", " + fullName + ", " + email + ", " + password + ", " + Arrays.toString(healthPlans);
+    }
 }

@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Company {
     private long id;
     private String name;
@@ -14,6 +16,7 @@ public class Company {
         if(giro<0){
              this.giro=0;
          }
+          this.giro=giro;
     }
 
     public void addEmployee(int index, String name) {
@@ -41,5 +44,10 @@ public class Company {
     public String getName(){
         return name;
     }
+
+    public  String toString(){ //Bu metodu yazmazsam bana referans adresi yazdırır
+        return id + ", " + name + ", " +  String.format("%.0f", giro) +  ", " + Arrays.toString(developerNames);
+    }
+     //String format kullanmadığımızda 5.E7 li görünüyordu tam görünmesi için çevirme yaptık
 
 }
