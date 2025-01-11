@@ -2,17 +2,20 @@ package org.example.enums;
 
 public enum Plan {
 
-    BASIC();
+    BASIC("Basic Plan",10);
     private String name;
-    private double price;
+    private int price;
 
-
+    Plan(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
 
     public  String getName(){
         return  name;
     }
 
-    public  double getPrice(){
+    public  int getPrice(){
         return  price;
     }
 }

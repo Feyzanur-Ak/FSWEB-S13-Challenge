@@ -17,8 +17,10 @@ public class Company {
     }
 
     public void addEmployee(int index, String name) {
+
         if(index<0 || index>=developerNames.length){
             System.out.println("İndex hatalı");
+            return;
         }
 
         if(developerNames[index]==null){
